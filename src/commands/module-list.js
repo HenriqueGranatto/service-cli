@@ -8,7 +8,7 @@ const command = {
           process.exit(0)
       }
 
-      await toolbox.showlistModules(toolbox)
+      await toolbox.showListModules(toolbox)
     }
   }
   
