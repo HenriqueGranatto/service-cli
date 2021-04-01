@@ -3,5 +3,10 @@
         "name": "kafka",
         "package": "service-cli-kafka",
         "link": "https://github.com/HenriqueGranatto/service-cli-kafka.git"
+    },
+    {
+        "name": "teste",
+        "package": "service-cli-kafka",
+        "link": "https://github.com/HenriqueGranatto/service-cli-kafka.git"
     }
 ]
