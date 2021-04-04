@@ -23,7 +23,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "gluegun": "latest"
+    "gluegun": "latest",
+    "service-cli-module": "git+https://github.com/HenriqueGranatto/service-cli-module.git"
   },
   "devDependencies": {
     "standard": "^12.0.1",
