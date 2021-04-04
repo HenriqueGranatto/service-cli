@@ -22,7 +22,7 @@ const command = {
 
       await toolbox.print.success(`- Adicionando: gitignore`)
       await toolbox.template.generate({
-          template: `module/.gitignore`,
+          template: `module/gitignore`,
           target: `module/.gitignore`,
       }) 
 
