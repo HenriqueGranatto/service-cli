@@ -7,7 +7,7 @@
     "service-cli": "bin/service-cli"
   },
   "scripts": {
-    "postinstall": "cd ./service-cli && npm install https://github.com/HenriqueGranatto/service-cli-module.git",
+    "postinstall": "echo ${PWD} && npm install https://github.com/HenriqueGranatto/service-cli-module.git",
     "format": "prettier --write **/*.{js,json} && standard --fix",
     "lint": "standard",
     "test": "jest",
