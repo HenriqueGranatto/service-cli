@@ -9,62 +9,62 @@ const command = {
     description: 'Cria um novo plugin para a CLI',
     run: async toolbox => {
       await toolbox.print.success(`- Adicionando diretório: commands`)
-      await toolbox.filesystem.dir('module/domain')
+      await toolbox.filesystem.dir('domain')
 
       await toolbox.print.success(`- Adicionando diretório: docs`)
-      await toolbox.filesystem.dir('module/docs')
+      await toolbox.filesystem.dir('docs')
 
       await toolbox.print.success(`- Adicionando diretório: extensions`)
-      await toolbox.filesystem.dir('module/extensions')
+      await toolbox.filesystem.dir('extensions')
 
       await toolbox.print.success(`- Adicionando diretório: templates`)
-      await toolbox.filesystem.dir('module/templates')
+      await toolbox.filesystem.dir('templates')
 
       await toolbox.print.success(`- Adicionando: gitignore`)
       await toolbox.template.generate({
-          template: `module/gitignore`,
-          target: `module/.gitignore`,
+          template: `gitignore`,
+          target: `.gitignore`,
       }) 
 
       await toolbox.print.success(`- Adicionando: license`)
       await toolbox.template.generate({
-          template: `module/LICENSE`,
-          target: `module/LICENSE`,
+          template: `LICENSE`,
+          target: `LICENSE`,
       }) 
 
       await toolbox.print.success(`- Adicionando: package.json`)
       await toolbox.template.generate({
           props: {name: toolbox.parameters.options.name},
-          template: `module/package.ejs`,
-          target: `module/package.json`,
+          template: `package.ejs`,
+          target: `package.json`,
       }) 
 
       await toolbox.print.success(`- Adicionando: readme.md`)
       await toolbox.template.generate({
           props: {name: toolbox.parameters.options.name},
-          template: `module/readme.ejs`,
-          target: `module/readme.md`,
+          template: `readme.ejs`,
+          target: `readme.md`,
       }) 
 
       await toolbox.print.success(`- Adicionando: package.json`)
       await toolbox.template.generate({
           props: {name: toolbox.parameters.options.name},
-          template: `module/package.ejs`,
-          target: `module/package.json`,
+          template: `package.ejs`,
+          target: `package.json`,
       }) 
 
       await toolbox.print.success(`- Adicionando: commands.md`)
       await toolbox.template.generate({
           props: {name: toolbox.parameters.options.name},
-          template: `module/docs/commands.ejs`,
-          target: `module/docs/commands.md`,
+          template: `docs/commands.ejs`,
+          target: `docs/commands.md`,
       }) 
 
       await toolbox.print.success(`- Adicionando: plugins.md`)
       await toolbox.template.generate({
           props: {name: toolbox.parameters.options.name},
-          template: `module/docs/plugins.ejs`,
-          target: `module/docs/plugins.md`,
+          template: `docs/plugins.ejs`,
+          target: `docs/plugins.md`,
       }) 
     }
   }
