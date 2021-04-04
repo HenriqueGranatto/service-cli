@@ -1,12 +1,12 @@
 module.exports = (toolbox) =>
 {
-    if(['module:install', 'module:uninstall'].indexOf(toolbox.parameters.command) >=0)
+    if(['module:install', 'module:update', 'module:uninstall'].indexOf(toolbox.parameters.command) >=0)
     {
-        toolbox.validate = validate
+        toolbox.validate = validateModuleCommand
     }
 }
 
-const validate = (toolbox, moduleList) =>
+const validateModuleCommand = (toolbox, moduleList) =>
 {
     toolbox.print.info("- Verificando módulo(s)")
     let modules = toolbox.filesystem.read('modules.json', 'json')
