@@ -8,8 +8,6 @@ const command = {
     name: 'service:create',
     description: 'Cria um novo serviço em branco',
     run: async toolbox => {
-      const modules = await toolbox.validate(toolbox, toolbox.parameters.array)
-
       /**
        * Include all service template files and directories 
        */
