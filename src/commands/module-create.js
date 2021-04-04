@@ -9,7 +9,7 @@ const command = {
     description: 'Cria um novo plugin para a CLI',
     run: async toolbox => {
       await toolbox.print.success(`- Adicionando diretório: commands`)
-      await toolbox.filesystem.dir('domain')
+      await toolbox.filesystem.dir('commands')
 
       await toolbox.print.success(`- Adicionando diretório: docs`)
       await toolbox.filesystem.dir('docs')
